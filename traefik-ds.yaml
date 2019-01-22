@@ -65,8 +65,8 @@ data:
           KeyFile = "/ssl/tls.key"
 
 
-      [entryPoints.admin]
-      address = ":8080"
+#      [entryPoints.admin]
+#      address = ":8080"
 ---
 kind: DaemonSet
 apiVersion: extensions/v1beta1
