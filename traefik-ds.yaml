@@ -158,6 +158,8 @@ metadata:
   namespace: kube-system
   annotations:
     traefik.frontend.rule.type: PathPrefixStrip
+    traefik.ingress.kubernetes.io/auth-type: "basic"
+    traefik.ingress.kubernetes.io/auth-secret: "admin"
 spec:
   rules:
   - host: u.main.velcom.by
