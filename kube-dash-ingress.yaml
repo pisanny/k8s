@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kubernetes-dashboard
+  namespace: kube-system
+  annotations:
+    traefik.frontend.rule.type: PathPrefixStrip
+spec:
+  rules:
+  - host: u.main.velcom.by
+    http:
+      paths:
+      - path: /kubernetes-dashboard
+        backend:
+          serviceName: kubernetes-dashboard
+          servicePort: 443
+  tls:
+  - secretName: traefik-ui-tls-cert
