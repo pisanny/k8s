@@ -116,7 +116,6 @@ spec:
         - --kubernetes
         - --logLevel=INFO
         - --configfile=/config/traefik.toml
-        - --insecureskipverify
 ---
 kind: Service
 apiVersion: v1
@@ -136,7 +135,6 @@ spec:
     - protocol: TCP
       name: admin
       port: 8080
-#  type: NodePort
 ---
 apiVersion: v1
 kind: Service
@@ -162,7 +160,7 @@ metadata:
     traefik.ingress.kubernetes.io/auth-secret: "admin"
 spec:
   rules:
-  - host: u.main.velcom.by
+  - host: domain.by
     http:
       paths:
       - path: /traefik-web-ui
