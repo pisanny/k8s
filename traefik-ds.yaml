@@ -155,15 +155,15 @@ metadata:
   name: traefik-web-ui
   namespace: kube-system
   annotations:
-    traefik.frontend.rule.type: PathPrefixStrip
     traefik.ingress.kubernetes.io/auth-type: "basic"
     traefik.ingress.kubernetes.io/auth-secret: "admin"
+    traefik.ingress.kubernetes.io/redirect-entry-point: https
 spec:
   rules:
-  - host: domain.by
+  - host: u.main.velcom.by
     http:
       paths:
-      - path: /traefik-web-ui
+      - path: / 
         backend:
           serviceName: traefik-web-ui
           servicePort: admin

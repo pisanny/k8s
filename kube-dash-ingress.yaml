@@ -13,6 +13,4 @@ spec:
       - path: /kubernetes-dashboard
         backend:
           serviceName: kubernetes-dashboard
-          servicePort: 443
-  tls:
-  - secretName: traefik-ui-tls-cert
+          servicePort: 443 
