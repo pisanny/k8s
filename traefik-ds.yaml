@@ -160,7 +160,7 @@ metadata:
     traefik.ingress.kubernetes.io/redirect-entry-point: https
 spec:
   rules:
-  - host: u.main.velcom.by
+  - host: uw.main.velcom.by
     http:
       paths:
       - path: / 
